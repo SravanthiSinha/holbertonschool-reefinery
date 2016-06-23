@@ -28,7 +28,7 @@ for show in fetch:
     seasons=curse.fetchall()
     print show[0]+":"
     for s in seasons:
-        print "\t Season "+str(s[1])
+        print "\t Season "+str(s[1])+":"
         get_episodes = "SELECT Episode.name, Episode.number FROM Episode where Episode.season_id= "+ str(s[0]) + " ORDER BY Episode.number"
         curse.execute(get_episodes)
         episodes =curse.fetchall()
